@@ -1,5 +1,4 @@
 # Labour Force Trend Analysis – London Economic Region  
-**Volunteer Data Analyst Project**
 
 ---
 
@@ -69,7 +68,8 @@ order by date
 
 ### Tableau (Visualization & Storytelling)
 Dashboards and story views were created to:
-- Show trends across years clearly  
+- 
+![Regional Employment Analytics Dashboard](Tableau-image/Dashboard-image.png)
 - Compare months year-over-year  
 - Annotate visuals with guiding analytical questions  
 - Focus on SME interpretation and recall  
