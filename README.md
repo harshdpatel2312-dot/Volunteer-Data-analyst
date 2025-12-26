@@ -40,44 +40,52 @@ SQL queries included in the repository demonstrate:
 - Historical and yearly average comparisons  
 - Window functions for trend identification  
 - Conditional logic to flag notable deviations
-  
--- Sample London Resilient periods
-with london_flags as (select
-w.Region,
-w.date,
-Participation_rate,
-Unemployment_Rate,
-case 
-    when Unemployment_Rate > avg(Unemployment_Rate) over (partition by w.region,year(w.date)) then 'spike'
-    else 'no spike'
-    end unemployment_spike_flag,
-case 
-    when Participation_rate< avg(Participation_rate) over (partition by w.region,year(w.date)) then 'drop' 
-    else 'no drop'
-    end participation_drop_flag
-from [working sheet labour force.xlsx - working sheet] as w
-where w.Region in ('london')
-)
-select *
-from london_flags
-where unemployment_spike_flag='spike' and participation_drop_flag='no drop'
-order by date
 
+## Sample London Resilient periods
+```sql
+WITH london_flags AS (
+    SELECT 
+        w.Region, 
+        w.date, 
+        Participation_rate, 
+        Unemployment_Rate, 
+        CASE 
+            WHEN Unemployment_Rate > AVG(Unemployment_Rate) OVER (PARTITION BY w.region, YEAR(w.date)) 
+            THEN 'spike' 
+            ELSE 'no spike' 
+        END AS unemployment_spike_flag, 
+        CASE 
+            WHEN Participation_rate < AVG(Participation_rate) OVER (PARTITION BY w.region, YEAR(w.date)) 
+            THEN 'drop' 
+            ELSE 'no drop' 
+        END AS participation_drop_flag 
+    FROM [working sheet labour force.xlsx - working sheet] AS w 
+    WHERE w.Region IN ('london')
+)
+SELECT * 
+FROM london_flags 
+WHERE unemployment_spike_flag = 'spike' 
+    AND participation_drop_flag = 'no drop' 
+ORDER BY date;
+```
 
 📂 See: `/sql/`
 
-### Tableau (Visualization & Storytelling)
-Dashboards and story views were created to:
-- 
-![Regional Employment Analytics Dashboard](Tableau-image/Dashboard-image.png)
-- Compare months year-over-year  
-- Annotate visuals with guiding analytical questions  
-- Focus on SME interpretation and recall  
+---
 
-📂 See:
-- `/tableau/dashboard_images/`  
-- `/tableau/story_images/`
-  
+### Tableau (Visualization & Storytelling)
+
+**Regional Employment Analytics Dashboard**:
+
+![Regional Employment Analytics Dashboard](Tableau%20image/Dashboard-image.png)
+
+## Sample Story 
+
+**Unemployment peaked twice**
+
+![story-1](Tableau%20image/Story%20point-1.png)
+
+📂 See: `/Tableau image/`
 
 ---
 
