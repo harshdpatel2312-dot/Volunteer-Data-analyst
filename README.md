@@ -32,6 +32,9 @@ Stakeholders did not define a specific problem or request recommendations. Their
 - Verified that month, year, and rate columns were consistent using lookup functions
 - Created a single 'Date' column by concatenating Month and Year (using CONCAT function)
 
+📂 See: [Before (Raw Data)](Labour%20force%20raw%20dataset.xlsx) → [After (Cleaned Data)](Cleaned%20labour%20force%20dataset.xlsx.csv)
+
+
 ### SQL (Analysis)
 SQL queries included in the repository demonstrate:
 - Monthly and yearly aggregation  
