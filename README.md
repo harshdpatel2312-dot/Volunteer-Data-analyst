@@ -5,7 +5,7 @@
 ## Executive Summary
 This volunteer project provides stakeholders with a **clear, long-term view of labour force trends for the London Economic Region** using data from **2006–2025**.
 
-Stakeholders did not define a specific problem or request recommendations. Their primary need was **trend visibility and historical context**. Using **Excel for data validation**, **SQL for analysis**, and **Tableau for dashboards and story views**, this project guides **subject matter experts (SMEs)** by highlighting historically comparable periods and framing **analytical questions** to support interpretation and recall.
+Stakeholders did not define a specific problem or request recommendations. Their primary need was **trend visibility and historical context**. Using **Excel for data validation**, **SQL for analysis**, and **Tableau for dashboards and story views**, this project supports subject matter experts by highlighting comparable historical periods and guiding interpretation through analytical questions.
 
 ---
 
@@ -17,9 +17,7 @@ Stakeholders did not define a specific problem or request recommendations. Their
 ---
 
 ## Dataset (2006–2025)
-- labour force (x1000 persons)
-- Employment (x1000 persons)
-- Unemployed (x1000 persons)
+- Labour force, Employment, Unemployed  (x1000 persons)
 - Metrics:
   - Participation Rate    
   - Unemployment Rate  
