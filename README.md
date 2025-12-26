@@ -69,7 +69,8 @@ WHERE unemployment_spike_flag = 'spike'
 ORDER BY date;
 ```
 
-📂 See: `/sql/`
+📂 See: [Full SQL file](Labour%20force.sql)
+
 
 ---
 
@@ -85,7 +86,8 @@ ORDER BY date;
 
 ![story-1](Tableau%20image/Story%20point-1.png)
 
-📂 See: `/Tableau image/`
+📂 See: [Full Tableau file](Tableau%20image)
+
 
 ---
 
