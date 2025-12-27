@@ -1,23 +1,23 @@
-# Labour Force Trend Analysis – London Economic Region  
+# Labor Force Trend Analysis – London Economic Region  
 
 ---
 
 ## Executive Summary
-This volunteer project provides stakeholders with a **clear, long-term view of labour force trends for the London Economic Region** using data from **2006–2025**.
+This volunteer project provides stakeholders with a **clear, long-term view of labor force trends for the London Economic Region** using data from **2006–2025**.
 
 Stakeholders did not define a specific problem or request recommendations. Their primary need was **trend visibility and historical context**. Using **Excel for data validation**, **SQL for analysis**, and **Tableau for dashboards and story views**, this project supports subject matter experts by highlighting comparable historical periods and guiding interpretation through analytical questions.
 
 ---
 
 ## Stakeholder Requirement
-- View long-term labour force trends for the London Economic Region  
+- View long-term labor force trends for the London Economic Region  
 - Compare recent movements to historical periods  
 - Use visuals to support discussion and interpretation  
 
 ---
 
 ## Dataset (2006–2025)
-- Labour force, Employment, Unemployed  (x1000 persons)
+- Labor force, Employment, Unemployed  (x1000 persons)
 - Metrics:
   - Participation Rate    
   - Unemployment Rate  
@@ -32,7 +32,7 @@ Stakeholders did not define a specific problem or request recommendations. Their
 - Verified that month, year, and rate columns were consistent using lookup functions
 - Created a single 'Date' column by concatenating Month and Year (using CONCAT function)
 
-📂 See: [Before (Raw Data)](Labour%20force%20raw%20dataset.xlsx) → [After (Cleaned Data)](Cleaned%20labour%20force%20dataset.xlsx.csv)
+📂 See: [Before (Raw Data)](labor%20force%20raw%20dataset.xlsx) → [After (Cleaned Data)](Cleaned%20labor%20force%20dataset.xlsx.csv)
 
 
 ### SQL (Analysis)
@@ -60,7 +60,7 @@ WITH london_flags AS (
             THEN 'drop' 
             ELSE 'no drop' 
         END AS participation_drop_flag 
-    FROM [working sheet labour force.xlsx - working sheet] AS w 
+    FROM [working sheet labor force.xlsx - working sheet] AS w 
     WHERE w.Region IN ('london')
 )
 SELECT * 
@@ -70,7 +70,7 @@ WHERE unemployment_spike_flag = 'spike'
 ORDER BY date;
 ```
 
-📂 See: [Full SQL file](Labour%20force.sql)
+📂 See: [Full SQL file](labor%20force.sql)
 
 
 ---
