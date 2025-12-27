@@ -32,7 +32,7 @@ Stakeholders did not define a specific problem or request recommendations. Their
 - Verified that month, year, and rate columns were consistent using lookup functions
 - Created a single 'Date' column by concatenating Month and Year (using CONCAT function)
 
-📂 See: [Before (Raw Data)](labor%20force%20raw%20dataset.xlsx) → [After (Cleaned Data)](Cleaned%20labor%20force%20dataset.xlsx.csv)
+📂 See: [Before (Raw Data)](Labor%20force%20raw%20dataset.xlsx) → [After (Cleaned Data)](Cleaned%20labor%20force%20dataset.xlsx.csv)
 
 
 ### SQL (Analysis)
@@ -70,7 +70,7 @@ WHERE unemployment_spike_flag = 'spike'
 ORDER BY date;
 ```
 
-📂 See: [Full SQL file](labor%20force.sql)
+📂 See: [Full SQL file](Labor%20force.sql)
 
 
 ---
@@ -87,8 +87,7 @@ ORDER BY date;
 
 ![story-1](Tableau%20image/Story%20point-1.png)
 
-📂 See: [Full Tableau file](Tableau%20image)
-
+📂 See: [Tableau Images](Tableau%20image)
 
 ---
 
